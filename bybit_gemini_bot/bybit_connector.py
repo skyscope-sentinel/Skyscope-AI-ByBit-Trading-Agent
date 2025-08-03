@@ -30,15 +30,15 @@ class BybitConnector:
 
         self.api_key = api_key
         self.api_secret = api_secret
-        self.testnet = testnet
+        self.mainnet = mainnet
         self.session = None
         self.ws_public = None
         self.ws_private = None
 
         # Determine WebSocket URLs
         if self.testnet:
-            self.ws_url_public_linear = "wss://stream-testnet.bybit.com/v5/public/linear"
-            self.ws_url_private = "wss://stream-testnet.bybit.com/v5/private"
+            self.ws_url_public_linear = "wss://stream-mainnet.bybit.com/v5/public/linear"
+            self.ws_url_private = "wss://stream-mainnet.bybit.com/v5/private"
             # Add other categories like spot, option if needed
             # self.ws_url_public_spot = "wss://stream-testnet.bybit.com/v5/public/spot"
         else:
